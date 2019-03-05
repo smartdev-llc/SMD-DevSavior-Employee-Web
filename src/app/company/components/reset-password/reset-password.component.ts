@@ -7,7 +7,6 @@ import {
 } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
-import { StRegisterComponent } from '../../../auth/components/st-register/st-register.component';
 import { matchingPasswordValidator } from '../../../auth/validators/matching-password.directive';
 
 @Component({
