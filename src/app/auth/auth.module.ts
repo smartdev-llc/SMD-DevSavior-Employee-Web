@@ -5,13 +5,7 @@ import { LayoutModule } from '../layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 
-import { StLoginComponent } from './components/st-login/st-login.component';
-import { StRegisterComponent } from './components/st-register/st-register.component';
-import { RegisterSuccessComponent } from './components/registerSuccess/registerSuccess.component';
-import { StLostPasswordComponent } from './components/st-lost-password/st-lost-password.component';
 import { MatchingPasswordDirective } from './validators/matching-password.directive';
-import { StResetPasswordComponent } from './components/st-reset-password/st-reset-password.component';
-import { StVerifyAccountComponent } from './components/st-verify-account/st-verify-account.component';
 import { AuthRoutes as routes } from './auth.routes';
 import { PolicyComponent } from './components/policy/policy.component';
 import { RegisterSuccessCPComponent } from './components/registerSuccessCP/registerSuccessCP.component';
@@ -27,14 +21,8 @@ import { RegisterSuccessCPComponent } from './components/registerSuccessCP/regis
     ReactiveFormsModule
   ],
   declarations: [
-    StLoginComponent,
-    StRegisterComponent,
-    RegisterSuccessComponent,
     RegisterSuccessCPComponent,
-    StLostPasswordComponent,
     MatchingPasswordDirective,
-    StResetPasswordComponent,
-    StVerifyAccountComponent,
     PolicyComponent
   ]
 })

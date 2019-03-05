@@ -53,7 +53,7 @@ export class HomeCompanyComponent implements OnInit {
       .subscribe(_ => {
         this.authService.signOut();
         localStorage.removeItem('user');
-        this.router.navigate(['/employer/home']);
+        this.router.navigate(['/home']);
         this.user = null;
       })
   }

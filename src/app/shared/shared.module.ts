@@ -14,7 +14,6 @@ import { JobItemComponent } from './components/jobs/job-item/job-item.component'
 import { LoadmoreButtonComponent } from './components/loadmore-button/loadmore-button.component';
 import { CompanyItemComponent } from './components/company/company-item.component';
 import { HotJobItemComponent } from './components/jobs/hotjob-item/hotjob-item.component';
-import { JVDropDownComponent } from './components/custom-dropdown/jv-dropdown.component';
 import { MonthYearPickerComponent } from './components/month-year-picker/month-year-picker.component';
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
@@ -46,7 +45,6 @@ import { KeyValuePipe } from '../core/pipes/key-value.pipe'
     HotJobItemComponent,
     LoadmoreButtonComponent,
     CompanyItemComponent,
-    JVDropDownComponent,
     MonthYearPickerComponent,
     UploadfileComponent,
     ConfirmDialogComponent,
@@ -69,7 +67,6 @@ import { KeyValuePipe } from '../core/pipes/key-value.pipe'
     TranslateModule,
     TranslateCacheModule,
     SocialLoginModule,
-    JVDropDownComponent,
     MonthYearPickerComponent,
     NgxLoadingModule,
     UploadfileComponent,

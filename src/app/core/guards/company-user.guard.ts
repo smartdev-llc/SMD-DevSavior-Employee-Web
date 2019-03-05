@@ -20,7 +20,7 @@ export class CompanyUserAuthGuard implements CanActivate {
     this.isCompanyRole = !!this.user && this.user.role === Role.Company;
 
     if (!this.isCompanyRole) {
-      this.router.navigate(['/employer/login'], { queryParams: { returnUrl: state.url }});
+      this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
     }
 
     return this.isCompanyRole;

@@ -21,29 +21,23 @@ import { LostPasswordComponent } from './components/lost-password/lost-password.
 import { CandidateDetailComponent } from './components/candidate-detail/candidate-detail.component';
 
 export const CompanyRoutes = [
-    { 
-        path: 'employer',
-        children: [
-            { path: '', redirectTo: 'login', pathMatch: 'full' },
-            { path: 'login', component: LoginComponent, canActivate: [CompanyLoggedGuard] },
-            { path: 'register', component: CpRegisterComponent, canActivate: [CompanyLoggedGuard] },
-            { path: 'home', component: HomeComponent },
-            { path: 'find-resumes', component: FindResumesComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'jobs/:type', component: JobListComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'jobs/:jobId/candidates', component: CandidateListComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'jobs/:jobId/candidates/:candidateId', component: CandidateDetailComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'statistic', component: StatisticComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'post-job', component: PostJobComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'profile', component: CompanyProfileComponent, canActivate: [CompanyUserAuthGuard] },
-            { path: 'verify-account', component: CompanyVerifyAccountComponent, canActivate: [CompanyLoggedGuard] },
-            { path: 'blacklist-candidate', component: BlackListCandidateComponent, canActivate: [CompanyLoggedGuard] },
-            { path: 'profile-deleted', component: ProfileDeletedComponent, canActivate: [CompanyLoggedGuard] },
-            { path: 'by-resume-search', component: ByResumeSearchComponent, canActivate: [CompanyLoggedGuard] },
-            { path: 'reset-password', component: ResetPasswordComponent },
-            { path: 'lost-password', component: LostPasswordComponent },
-            { path: 'jobs/:id/edit', component: EditJobComponent, canActivate: [CompanyUserAuthGuard] },
-
-        ]
-    },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'login', component: LoginComponent, canActivate: [CompanyLoggedGuard] },
+    { path: 'register', component: CpRegisterComponent, canActivate: [CompanyLoggedGuard] },
+    { path: 'home', component: HomeComponent },
+    { path: 'find-resumes', component: FindResumesComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'jobs/:type', component: JobListComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'jobs/:jobId/candidates', component: CandidateListComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'jobs/:jobId/candidates/:candidateId', component: CandidateDetailComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'statistic', component: StatisticComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'post-job', component: PostJobComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'profile', component: CompanyProfileComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'verify-account', component: CompanyVerifyAccountComponent, canActivate: [CompanyLoggedGuard] },
+    { path: 'blacklist-candidate', component: BlackListCandidateComponent, canActivate: [CompanyLoggedGuard] },
+    { path: 'profile-deleted', component: ProfileDeletedComponent, canActivate: [CompanyLoggedGuard] },
+    { path: 'by-resume-search', component: ByResumeSearchComponent, canActivate: [CompanyLoggedGuard] },
+    { path: 'reset-password', component: ResetPasswordComponent },
+    { path: 'lost-password', component: LostPasswordComponent },
+    { path: 'jobs/:id/edit', component: EditJobComponent, canActivate: [CompanyUserAuthGuard] },
     { path : 'detail-candidate/:jobId/:candidateId', component: CandidateDetailComponent, canActivate: [CompanyUserAuthGuard] }
 ];

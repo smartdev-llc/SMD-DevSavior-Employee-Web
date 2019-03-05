@@ -5,7 +5,7 @@
       <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
           <div class="logo">
-            <a routerLink="/employer/home">
+            <a routerLink="/home">
               <img src="../../../assets/images/logoEmployer.png" alt="Photo" />
             </a>
           </div>
@@ -19,10 +19,10 @@
             </a>
             <!-- not logged in -->
             <ng-container *ngIf="!user">
-              <a routerLink="/employer/login" class="student-login">
+              <a routerLink="/login" class="student-login">
                 <span class="label job-type partytime">{{ 'header.login' | translate }}</span>
               </a>
-              <a routerLink="/employer/register" class="student-register">
+              <a routerLink="/register" class="student-register">
                 <span class="label job-type partytime">{{ 'header.register' | translate }}</span>
               </a>
             </ng-container>
@@ -33,7 +33,7 @@
               <a (click)="logout()" class="student-login">
                 <span class="label job-type partytime">{{ 'header.log_out' | translate }}</span>
               </a>
-              <a routerLink="/employer/jobs/all" class="student-register">
+              <a routerLink="/jobs/all" class="student-register">
                 <span class="label job-type partytime">{{ 'header.recruitment_center' | translate }}</span>
               </a>
             </ng-container>
@@ -69,10 +69,10 @@
               <!-- not logged in -->
               <ng-container *ngIf="!user">
                 <li class="mobile-menu">
-                  <a routerLink="/employer/login">{{ 'header.login' | translate }}</a>
+                  <a routerLink="/login">{{ 'header.login' | translate }}</a>
                 </li>
                 <li class="mobile-menu">
-                  <a routerLink="/employer/register">{{ 'header.register' | translate }}</a>
+                  <a routerLink="/register">{{ 'header.register' | translate }}</a>
                 </li>
                 <li class="mobile-menu">
                   <a routerLink="/">{{ 'header.jobseeker_mobile' | translate }}</a>
@@ -87,7 +87,7 @@
                   <a (click)="logout()">{{ 'header.log_out' | translate }}</a>
                 </li>
                 <li class="mobile-menu">
-                  <a routerLink="/employer/jobs/all">{{ 'header.recruitment_center' | translate }}</a>
+                  <a routerLink="/jobs/all">{{ 'header.recruitment_center' | translate }}</a>
                 </li>
               </ng-container>
               <!-- logging -->

@@ -25,7 +25,7 @@
             </a>
             <ul class="dropdown-menu right-menu">
               <li>
-                <a routerLink="/employer/profile">
+                <a routerLink="/profile">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   &nbsp;&nbsp;{{ 'header.account_infomation' | translate }}</a>
               </li>
@@ -85,14 +85,14 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li>
-                <a routerLink="/employer/jobs/all">
+                <a routerLink="/jobs/all">
                   <i class="fa fa-file-text-o"></i>
                   {{ 'header.jobs' | translate }}
                 </a>
               </li>
 
               <li>
-                <a routerLink="/employer/jobs/all/candidates">
+                <a routerLink="/jobs/all/candidates">
                   <i class="fa fa-file-text-o"></i>
                   {{ 'header.candidate' | translate }}
                 </a>
@@ -107,25 +107,25 @@
                 </a>
                 <ul class="dropdown-menu" id="bs-1">
                   <li>
-                    <a routerLink="/employer/candidates">
+                    <a routerLink="/candidates">
                       <i class="fa fa-file"></i>
                       {{ 'header.byJob' | translate }}
                     </a>
                   </li>
                   <li>
-                    <a routerLink="/employer/by-resume-search">
+                    <a routerLink="/by-resume-search">
                       <i class="fa fa-search"></i>
                       {{ 'header.byResume' | translate }}
                     </a>
                   </li>
                   <li>
-                    <a routerLink="/employer/blacklist-candidate">
+                    <a routerLink="/blacklist-candidate">
                       <i class="fa fa-user-secret"></i>
                       {{ 'header.blacklist' | translate }}
                     </a>
                   </li>
                   <li>
-                    <a routerLink="/employer/profile-deleted">
+                    <a routerLink="/profile-deleted">
                       <i class="fa fa-user-times"></i>
                       {{ 'header.cv_deleted' | translate }}
                     </a>
@@ -141,20 +141,20 @@
               </li>
 
               <li class="find-candidate-mobile">
-                <a routerLink="/employer/find-resumes">
+                <a routerLink="/find-resumes">
                   <i class="fa fa-search"></i>
                   {{ 'header.find_candidate' | translate }}
                 </a>
               </li>
 
-              <a routerLink="/employer/post-job" class="post_job">
+              <a routerLink="/post-job" class="post_job">
                 <span class="label job-type partytime">
                   <i class="fa fa-plus-circle"></i>
                   {{ 'header.post_job' | translate }}
                 </span>
               </a>
 
-              <!-- <a routerLink="/employer/find-resumes" class="post_job">
+              <!-- <a routerLink="/find-resumes" class="post_job">
                 <span class="label job-type partytime">
                   <i class="fa fa-search"></i>
                   {{ 'header.find_candidate' | translate }}

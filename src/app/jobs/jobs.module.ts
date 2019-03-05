@@ -10,13 +10,6 @@ import { SharedModule } from '../shared/shared.module';
 import { QuillModule } from 'ngx-quill';
 import { PostJobCompanyService } from '../core/services/post-job/PostJobCompanyService';
 
-
-// Components
-import { BrowseJobsComponent } from './components/list-browse-jobs/browse-jobs.component';
-import { BrowseJobsAlternativeComponent } from './components/list-browse-jobs-alternative/browse-jobs-alternative.component';
-import { JobDetailComponent } from './components/job-detail/job-detail.component';
-
-
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 
@@ -27,21 +20,14 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { CategoryCompanyService } from '../core/services/category/CategoryCompanyService';
 import { SkillService } from '../core/services/skill/SkillService';
 
-import { JobCategories }  from './components/list-browse-jobs/job-resolve';
 import {JobService} from '../core/services/job.service';
 import {ProfileService} from '../company/services/profile.service';
 
 @NgModule({
   declarations: [
-    BrowseJobsComponent,
-    BrowseJobsAlternativeComponent,
-    JobDetailComponent,
     ContactUsComponent
   ],
   exports: [
-    BrowseJobsComponent,
-    BrowseJobsAlternativeComponent,
-    JobDetailComponent
   ],
   imports: [
     RouterModule.forChild(routes),
@@ -60,7 +46,6 @@ import {ProfileService} from '../company/services/profile.service';
   providers: [
     CategoryCompanyService,
     SkillService,
-    JobCategories,
     PostJobCompanyService,
     JobService,
     ProfileService

@@ -5,18 +5,18 @@
             <div class="tab_filters">
                 <ul class="nav nav-pills">
                     <li [ngClass]="{'active': status == 'ALL'}">
-                        <a routerLink="/employer/jobs/ALL">{{ 'company.jobStatus.all' |  translate}}
+                        <a routerLink="/jobs/ALL">{{ 'company.jobStatus.all' |  translate}}
                         </a>
                     </li>
                     <li [ngClass]="{'active': status == 'HOTJOB'}">
-                        <a routerLink="/employer/jobs/HOTJOB">{{ 'company.jobStatus.hotJob' |  translate}}
+                        <a routerLink="/jobs/HOTJOB">{{ 'company.jobStatus.hotJob' |  translate}}
                             <span class="badge j-number">{{hotJobs.size}}</span>
                         </a>
                     </li>
 
                     <ng-template ngFor let-jobType [ngForOf]="typeJobs | keyValue">
                         <li [ngClass]="{'active' : status == jobType.key}">
-                            <a routerLink="/employer/jobs/{{jobType.key}}">{{ jobType.key |  translate}}
+                            <a routerLink="/jobs/{{jobType.key}}">{{ jobType.key |  translate}}
                       <span class="badge j-number">{{jobType.value}}</span>
                     </a>
                         </li>
@@ -73,9 +73,9 @@
                             </div>
                             <div class="j-actions" >
                                 <a routerLink="/jobs/{{job.id}}" target="_blank">{{ 'company.jobListHeader.viewOnline' | translate}}</a>
-                                <a routerLink="/employer/jobs/{{job.id}}/edit">{{ 'company.jobListHeader.edit' | translate}}</a>
+                                <a routerLink="/jobs/{{job.id}}/edit">{{ 'company.jobListHeader.edit' | translate}}</a>
                                 <button (click)="deleteJob(job.id)">{{ 'company.jobListHeader.del' | translate}}</button>
-                                <a *ngIf="job.status == 'ACTIVE'" routerLink="/employer/jobs/{{job.id}}/candidates">{{ 'company.jobListHeader.viewCandidates' | translate}}</a>
+                                <a *ngIf="job.status == 'ACTIVE'" routerLink="/jobs/{{job.id}}/candidates">{{ 'company.jobListHeader.viewCandidates' | translate}}</a>
                             </div>
                         </div>
                     </td>
@@ -93,7 +93,7 @@
                     </td>
                     <td>
                         <div class="text-center">
-                            <a routerLink="/employer/jobs/{{job.id}}/candidates">{{job.students?.length}}</a>
+                            <a routerLink="/jobs/{{job.id}}/candidates">{{job.students?.length}}</a>
                         </div>
                     </td>
                     <td class="text-center">

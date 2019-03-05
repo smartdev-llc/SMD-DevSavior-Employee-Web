@@ -45,7 +45,7 @@
                   </li>
                 </ul>
                 <div class="j-list-all text-right">
-                  <a routerLink="/employer/jobs/all">
+                  <a routerLink="/jobs/all">
                     <span class="glyphicon glyphicon-menu-right"></span>
                     <span>{{ 'header.moreJobs' | translate }}</span>
                   </a>
@@ -105,7 +105,7 @@
               <div>
                 <!-- <div class="mobile sm-hide col-xs-3">Name</div> -->
                 <div class="name col-sm-12 col-xs-9" >
-                  <a routerLink="/employer/jobs/{{currentJob.id}}/candidates/{{candidate.id}}" target="_blank">
+                  <a routerLink="/jobs/{{currentJob.id}}/candidates/{{candidate.id}}" target="_blank">
                     {{ candidate.displayName }}
                   </a>
                   <div *ngIf="candidate.educationDegrees && candidate.educationDegrees.length">
@@ -141,7 +141,7 @@
               <div>
                 <!-- <div class="mobile sm-hide col-xs-3">Actions</div> -->
                 <div class="actions col-sm-12 col-xs-9 text-center">
-                  <a class="btn btn-default btn-small" routerLink="/employer/jobs/{{currentJob.id}}/candidates/{{candidate.id}}" target="_blank">
+                  <a class="btn btn-default btn-small" routerLink="/jobs/{{currentJob.id}}/candidates/{{candidate.id}}" target="_blank">
                     <span class="glyphicon glyphicon-eye-open"></span>
                   </a>
                 </div>
