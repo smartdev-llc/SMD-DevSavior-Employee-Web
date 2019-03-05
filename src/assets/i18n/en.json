@@ -93,7 +93,8 @@
         "website": "Website",
         "companyDescription": "Company description",
         "companyLogo": "Company Logo",
-        "companyCoverPhoto": "Company Cover photo"
+        "companyCoverPhoto": "Company Cover photo",
+        "changePassword": "Change password"
     },
     "company": {
         "strategicPartners" : "Strategic Partners",
@@ -156,6 +157,14 @@
                 "currentAddress": "Current Address"
 
             }
+        },
+        "changePassword": {
+            "header": "Change password",
+            "oldPassword": "Password", 
+            "newPassword": "New password",
+            "confirmNewPassword": "Confirm new password",
+            "update": "Update",
+            "success": "You've just udpated your password successfully. Please log in with your new password!"
         },
         "upTo": "Lên đến "
 

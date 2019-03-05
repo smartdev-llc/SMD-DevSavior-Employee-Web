@@ -93,7 +93,8 @@
         "website": "Địa chỉ trang chủ",
         "companyDescription": "Mô tả",
         "companyLogo": "Logo công ty",
-        "companyCoverPhoto": "Ảnh bìa công ty"
+        "companyCoverPhoto": "Ảnh bìa công ty",
+        "changePassword": "Thay đổi mật khẩu"
     },
     "company": {
         "strategicPartners" : "Đối tác chiến lược",
@@ -156,6 +157,14 @@
                 "currentAddress": "Địa chỉ"
 
             }
+        },
+        "changePassword": {
+            "header": "Thay đổi mật khẩu",
+            "oldPassword": "Mật khẩu hiện tại", 
+            "newPassword": "Mật khẩu mới",
+            "confirmNewPassword": "Mật khẩu mới",
+            "update": "Cập nhật",
+            "success": "Bạn đã cập nhật mật khẩu thành công"
         },
         "upTo": "Up to "
     },
