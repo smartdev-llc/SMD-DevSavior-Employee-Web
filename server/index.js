@@ -36,6 +36,6 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/juniorViec/index.html'));
 });
 
-app.listen(process.env.PORT || 8080, function() {
-  console.log('app running on port', process.env.PORT || 8080);
+app.listen(process.env.PORT || 8090, function() {
+  console.log('app running on port', process.env.PORT || 8090);
 });

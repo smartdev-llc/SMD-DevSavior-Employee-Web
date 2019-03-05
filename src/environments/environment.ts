@@ -9,6 +9,7 @@ export const environment = {
   production: false,
   appUrl: 'http://localhost:4200',
   apiEndpoint: 'https://uat.api.juniorviec.com',
+  studentUrl: 'https://uat.juniorviec.com',
   appName: DEFAULT_CONFIG.appName,
   config: DEFAULT_CONFIG
 };

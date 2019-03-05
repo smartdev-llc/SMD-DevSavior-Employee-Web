@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { NgxInputStarRatingModule } from '@ngx-lite/input-star-rating';
-import { ShareButtonModule } from '@ngx-share/button'
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { LayoutModule } from '../layout';
 import { SharedModule } from '../shared/shared.module';
@@ -40,8 +39,7 @@ import {ProfileService} from '../company/services/profile.service';
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    QuillModule,
-    ShareButtonModule.forRoot()
+    QuillModule
   ],
   providers: [
     CategoryCompanyService,

@@ -351,18 +351,6 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ngx-share/button@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@ngx-share/button/-/button-7.0.0.tgz#97dea3e05a4cafedb3118b8e371e317c43da1dd5"
-  dependencies:
-    tslib "^1.9.0"
-
-"@ngx-share/core@7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@ngx-share/core/-/core-7.0.0.tgz#6a787b132d7dd146f9e5687b8736de9bafa99524"
-  dependencies:
-    tslib "^1.9.0"
-
 "@ngx-translate/core@^10.0.2":
   version "10.0.2"
   resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-10.0.2.tgz#5eeb78f47845b476a1e892fb2fb153dbbaf72850"

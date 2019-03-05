@@ -1,3 +1,4 @@
+import { environment } from '../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateCacheService } from 'ngx-translate-cache';
@@ -16,6 +17,7 @@ export class HomeCompanyComponent implements OnInit {
   isEnLang: boolean = false;
   user: any;
   subscription: Subscription;
+  studentUrl = environment.studentUrl;
 
   constructor(
     private languageService: LanguageService,

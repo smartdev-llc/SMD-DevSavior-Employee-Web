@@ -41,7 +41,6 @@ Table Of Index
 35. Blog
 36. Accordian
 ------------------------------------------*/
-@import '~@ngx-share/button/themes/circles/circles-dark-theme.css';
 
 body {
     background: #f9f9f9;
@@ -1633,7 +1632,7 @@ priceing_tables .startup {
 
 .user-data .seprator {
     position: relative;
-    
+
 }
 
 .user-data .seprator:last-child {
@@ -2017,7 +2016,7 @@ ul.simple li {
     .related_jos {
         height: 245px;
     }
-   
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
