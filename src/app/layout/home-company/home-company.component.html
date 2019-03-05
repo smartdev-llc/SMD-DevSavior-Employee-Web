@@ -39,7 +39,7 @@
             </ng-container>
             <!-- logging -->
 
-            <a routerLink="/" class="employer">
+            <a class="employer" href="{{studentUrl}}" target="_blank">
               <span class="label job-type partytime Companies-head">
                 <p class="main-title">{{ 'header.jobseeker' | translate }}</p>
               </span>
@@ -64,7 +64,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li>
-                <a routerLink="/">{{ 'header.services_product' | translate }}</a>
+                <a href="{{studentUrl}}" target="_blank">{{ 'header.services_product' | translate }}</a>
               </li>
               <!-- not logged in -->
               <ng-container *ngIf="!user">
@@ -75,7 +75,7 @@
                   <a routerLink="/register">{{ 'header.register' | translate }}</a>
                 </li>
                 <li class="mobile-menu">
-                  <a routerLink="/">{{ 'header.jobseeker_mobile' | translate }}</a>
+                  <a href="{{studentUrl}}" target="_blank">{{ 'header.jobseeker_mobile' | translate }}</a>
                 </li>
               </ng-container>
               <!-- not logged in -->

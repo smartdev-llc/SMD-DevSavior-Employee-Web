@@ -21,10 +21,9 @@ import { LostPasswordComponent } from './components/lost-password/lost-password.
 import { CandidateDetailComponent } from './components/candidate-detail/candidate-detail.component';
 
 export const CompanyRoutes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: '', component: HomeComponent },
     { path: 'login', component: LoginComponent, canActivate: [CompanyLoggedGuard] },
     { path: 'register', component: CpRegisterComponent, canActivate: [CompanyLoggedGuard] },
-    { path: 'home', component: HomeComponent },
     { path: 'find-resumes', component: FindResumesComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'jobs/:type', component: JobListComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'jobs/:jobId/candidates', component: CandidateListComponent, canActivate: [CompanyUserAuthGuard] },
