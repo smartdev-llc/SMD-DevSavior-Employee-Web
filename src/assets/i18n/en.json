@@ -96,10 +96,7 @@
         "companyCoverPhoto": "Company Cover photo"
     },
     "company": {
-        "strategicPartners" : "Strategic Partners",
-        "trainingsCourses" : "Trainings Courses",
-        "corporatePrograms" : "Corporate Programs",
-        "companyWeHelp": "Company We helped",
+        "btnRegisterNow": "REGISTER NOW!",
         "hrWelcome": "Welcome to",
         "hrMainContent" : "We believe in the value that our functions add to a business. We feel that this specialist part of HR is often unrecognised for its contribution to the profitability and success of a business.",
         "mainTitleListCompany": "Our Awesome Companies",
