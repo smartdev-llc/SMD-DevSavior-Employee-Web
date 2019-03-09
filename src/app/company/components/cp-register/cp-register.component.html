@@ -24,7 +24,7 @@
                   </div>
                   <form [formGroup]="registerForm" (ngSubmit)="registerNewUser()" novalidate="novalidate" id="formSignUp"
                     class="m-t-lg" role="form">
-                    <div class="form-group global-error p" [style.display]="hasServerError ? '' : 'none'">
+                    <div class="form-group global-error spacing" [style.display]="hasServerError ? '' : 'none'">
                       <label></label>
                       <div *ngIf="submitted" class="error-input">
                         <div *ngIf="submitted && registerForm.errors?.serverError">
@@ -35,7 +35,7 @@
                     <div class="alert alert-danger hide">
 
                     </div>
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="user_email" aria-required="true">{{ 'register.mail' |
                         translate }}</label>
                       <input type="email" formControlName="email" id="user_email" name="email" class="form-control form-control"
@@ -54,7 +54,7 @@
                     </div>
 
                     <ng-container formGroupName="formPassword">
-                      <div class="form-group p">
+                      <div class="form-group spacing">
                         <label class="control-label required" for="password" aria-required="true">{{ 'register.pass' |
                           translate }} (<i class="fa fa-info tip-password" title="" data-original-title="Một mật khẩu hợp lệ phải chứa từ 4 đến 20 ký tự."></i>)</label>
                         <!-- <input type="password" id="password" name="password" [ngClass]="{ 'has-error': p.password.errors?.minlength || submitted && p.password.errors}" formControlName="password" class="form-control form-control" aria-required="true"> -->
@@ -71,7 +71,7 @@
                         </div>
                       </div>
 
-                      <div class="form-group p">
+                      <div class="form-group spacing">
                         <label class="control-label required" for="user_password_second" aria-required="true">{{
                           'register.cPass' | translate }}</label>
                         <input type="password" id="user_password_second" name="cpassword" required="required" class="form-control form-control"
@@ -92,7 +92,7 @@
                       </div>
                     </ng-container>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="company_name" aria-required="true">{{
                         'register.nameCp' | translate }}</label>
                       <input type="text" id="company_name" name="name" [ngClass]="{ 'has-error': submitted && f.name.errors}"
@@ -107,7 +107,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="user_company_name" aria-required="true">{{
                         'register.nameHR' | translate }}</label>
                       <input type="text" id="user_company_name" name="contactName" [ngClass]="{ 'has-error': submitted && f.contactName.errors}"
@@ -122,7 +122,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="cp_location" aria-required="true">{{ 'register.city' |
                         translate }}</label>
                       <select class="form-control form-control" [ngClass]="{ 'has-error': submitted && f.city.errors}"
@@ -139,7 +139,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="cp_address" aria-required="true">{{ 'register.address'
                         | translate }}</label>
                       <input type="text" name="address" [ngClass]="{ 'has-error': submitted && f.address.errors}"
@@ -151,7 +151,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="user_phone" aria-required="true">{{ 'register.phone' |
                         translate }}</label>
                       <input type="text" id="user_phone" name="phoneNumber" [ngClass]="{ 'has-error': submitted && f.phoneNumber.errors}"
@@ -163,7 +163,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label class="control-label required" for="cp_website" aria-required="true">{{ 'register.web' |
                         translate }}</label>
                       <input type="text" id="cp_website" name="website" [ngClass]="{ 'has-error': submitted && f.website.errors}"
@@ -178,7 +178,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <label for="#user_termsAccepted" style="display: content;">
                         <input class="checkTerms" type="checkbox" name="checkbox" id="user_termsAccepted"
                           formControlName="checkbox" [ngClass]="{ 'has-error': submitted && f.checkbox.errors}">
@@ -192,10 +192,10 @@
                         </div>
                       </div>
                     </div>
-                    <div class="form-group p" style="margin-top: 50px;">
+                    <div class="form-group spacing" style="margin-top: 50px;">
                       <input type="submit" value="{{ 'register.signUp' | translate }}" class=" btn btn-success btn-dk">
                     </div>
-                    <div class="form-group p">
+                    <div class="form-group spacing">
                       <p class="text-center">{{ 'register.haveAcc' | translate }}<a routerLink="/login">{{
                           'register.signInNow' | translate }}</a></p>
                     </div>
