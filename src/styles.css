@@ -2732,6 +2732,10 @@ ul.alphabet li {
     opacity: 0;
 }
 
+.spacing{
+    padding: 0px 15px 10px 15px;
+}
+
 .contact_us .form-group input[type="submit"],
 #register,
 .btn-black,
