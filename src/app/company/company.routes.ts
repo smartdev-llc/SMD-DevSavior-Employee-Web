@@ -19,6 +19,7 @@ import { CompanyVerifyAccountComponent } from './components/company-verify-accou
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { LostPasswordComponent } from './components/lost-password/lost-password.component';
 import { CandidateDetailComponent } from './components/candidate-detail/candidate-detail.component';
+import {DetailJobComponent} from './detail-job/detail-job.component';
 
 export const CompanyRoutes = [
     { path: '', component: HomeComponent },
@@ -28,6 +29,7 @@ export const CompanyRoutes = [
     { path: 'jobs/:type', component: JobListComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'jobs/:jobId/candidates', component: CandidateListComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'jobs/:jobId/candidates/:candidateId', component: CandidateDetailComponent, canActivate: [CompanyUserAuthGuard] },
+    { path: 'company/job/:jobId', component: DetailJobComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'statistic', component: StatisticComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'post-job', component: PostJobComponent, canActivate: [CompanyUserAuthGuard] },
     { path: 'profile', component: CompanyProfileComponent, canActivate: [CompanyUserAuthGuard] },

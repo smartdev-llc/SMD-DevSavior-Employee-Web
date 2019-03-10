@@ -1,0 +1,129 @@
+<app-header></app-header>
+
+<!-- Page Title-->
+<div class="container-fluid page-title">
+  <div id="loadessr" style="left: 0px;" *ngIf="isLoading">
+    <div id="loader">
+    </div>
+  </div>
+  <div>
+    <div class="row green-banner">
+      <div class="container main-container">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <!--Job Name-->
+          <h3 class="white-heading">Heading</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row dashboard">
+      <div class="container main-container gery-bg">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  no-padding user-data">
+          <div class="col-md-12 col-lg-5 col-xs-12 col-sm-12 seprator">
+            <div class="no-padding user-image"><img src="}"
+                                                    width="77" height="77" alt="img-logo-company" /></div>
+            <div class="user-tag">Company Name</div>
+            <div class="job-status"><span class="label job-type job-partytime">{{PART_TIME| jobTypePipe}}</span></div>
+          </div>
+
+          <div class="col-md-3 col-lg-4 col-xs-12 col-sm-12 seprator">
+            <div class="user-tag">
+              <label>{{ 'header.salary' | translate }}
+                <span>200</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-lg-3 col-xs-12 col-sm-12 seprator">
+            <div class="user-tag">
+              <label>{{ 'header.address' | translate }}
+                <h5>Company Address</h5>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Page Title-->
+
+<!-- Job Data -->
+<div class="container-fluid jpd-data white-bg" >
+  <div class="row">
+    <div class="container main-container-job">
+      <div class="col-lg-9 col-md-9 col-sm-8">
+        <!-- <div class="post-image">
+          <img src="{{coverCompany}}" alt="" class="cover-company"/>
+        </div> -->
+        <div class="content">
+          <h3>Job Title</h3>
+          <div class="row">
+            <div class="col-md-12">
+              <!--<ng-template ngFor let-skill [ngForOf]="job.skills | keyValue">
+                <div class="job-status">
+                  <span class="label job-type job-partytime  mx-2">{{skill.value.name}}</span>
+                </div>
+              </ng-template>-->
+            </div>
+          </div>
+          <div></div>
+
+          <h2 >{{ 'header.requirement' | translate }}</h2>
+          <div ></div>
+
+          <h2 >{{ 'header.benefit' | translate }}</h2>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-sm-4 sidebar">
+        <div class="widget w1">
+          <ul>
+            <li>
+              <a>
+                <span
+                      class="label job-type pointer isApplied">
+                  <span *ngIf="true">
+                    {{ 'header.apply' | translate }}
+                  </span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <!--Logo Image-->
+              <img class="img-responsive circle-logo-image" src="{{logoCompany}}" alt="" />
+            </li>
+          </ul>
+          <ul class="social">
+            <li><a ><i class="fa fa-user-o display-inline"></i> Company Name</a></li>
+            <li><a  target="_blank"><i class="fa fa-link display-inline"></i>Company Website</a></li>
+            <li><a ><i class="fa fa-envelope display-inline"></i>Company email</a></li>
+          </ul>
+        </div>
+        <div class="share-button-group">
+          <!--<share-button button="facebook" size="-4" theme="circles-dark" [icon]="fbIcon"></share-button>
+          <share-button button="google" size="-4" theme="circles-dark" [icon]="googlePlusIcon"></share-button>
+          <share-button button="linkedin" size="-4" theme="circles-dark" [icon]="linkedInIcon"></share-button>
+          <share-button button="pinterest" size="-4" theme="circles-dark" [icon]="pinIcon"></share-button>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Job Data-->
+
+<!--Contact us Section -->
+<div class="container-fluid green-banner" style="background:#12cd6a">
+  <div class="row">
+    <div class="container main-container v-middle" id="style-2">
+      <div class="col-lg-10 col-md-8 col-sm-8 col-xs-12  ">
+        <h3 class="white-heading">Got a question</h3>
+      </div>
+      <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+        <a routerLink="/contact-us" target="_blank" class="btn btn-getstarted bg-red">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--blue Section -->
+<app-footer></app-footer>
