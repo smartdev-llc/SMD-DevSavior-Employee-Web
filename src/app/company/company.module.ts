@@ -14,7 +14,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CpRegisterComponent } from './components/cp-register/cp-register.component';
-import { StatisticComponent } from './components/statistic/statistic.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 import { CarouselModule } from 'ngx-bootstrap';
@@ -34,7 +33,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { CandidateDetailComponent } from './components/candidate-detail/candidate-detail.component';
 import { CandidateService } from '../core/services/candidate/candidate.service';
 import { EditJobComponent }  from './components/edit-job/edit-job.component';
-
+import { ChangePasswordComponent } from './components/change-password/change-password.component'
 @NgModule({ 
   imports: [
     CommonModule,
@@ -58,7 +57,6 @@ import { EditJobComponent }  from './components/edit-job/edit-job.component';
     JobListComponent,
     CandidateListComponent,
     CpRegisterComponent,
-    StatisticComponent,
     PostJobComponent,
     CompanyProfileComponent,
     CompanyVerifyAccountComponent,
@@ -68,7 +66,8 @@ import { EditJobComponent }  from './components/edit-job/edit-job.component';
     LostPasswordComponent,
     ResetPasswordComponent,
     CandidateDetailComponent,
-    EditJobComponent
+    EditJobComponent,
+    ChangePasswordComponent
   ],
   providers: [
     CategoryCompanyService,
