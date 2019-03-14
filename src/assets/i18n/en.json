@@ -93,13 +93,11 @@
         "website": "Website",
         "companyDescription": "Company description",
         "companyLogo": "Company Logo",
-        "companyCoverPhoto": "Company Cover photo"
+        "companyCoverPhoto": "Company Cover photo",
+        "changePassword": "Change password"
     },
     "company": {
-        "strategicPartners" : "Strategic Partners",
-        "trainingsCourses" : "Trainings Courses",
-        "corporatePrograms" : "Corporate Programs",
-        "companyWeHelp": "Company We helped",
+        "btnRegisterNow": "REGISTER NOW!",
         "hrWelcome": "Welcome to",
         "hrMainContent" : "We believe in the value that our functions add to a business. We feel that this specialist part of HR is often unrecognised for its contribution to the profitability and success of a business.",
         "mainTitleListCompany": "Our Awesome Companies",
@@ -156,6 +154,14 @@
                 "currentAddress": "Current Address"
 
             }
+        },
+        "changePassword": {
+            "header": "Change password",
+            "oldPassword": "Password", 
+            "newPassword": "New password",
+            "confirmNewPassword": "Confirm new password",
+            "update": "Update",
+            "success": "You've just udpated your password successfully. Please log in with your new password!"
         },
         "upTo": "Lên đến "
 

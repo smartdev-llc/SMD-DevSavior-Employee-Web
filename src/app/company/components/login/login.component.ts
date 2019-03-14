@@ -9,6 +9,7 @@ import { InternalServer } from '../../../core/error/internal-server';
 import { LanguageService } from '../../../layout/services/language.service';
 import { Unauthorized } from '../../../core/error/unauthorized';
 import {BadRequest} from '../../../core/error/bad-request';
+import { ChangePasswordComponent } from '../change-password/change-password.component';
 
 @Component({
   selector: 'app-login',
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
   isEnLang: boolean = false;
   returnUrl: string;
   isNotApproval = false;
+  isRedirectChangePassword = false;
 
   constructor(
     private languageService: LanguageService,
@@ -42,7 +44,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.initForm();
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/jobs/ALL';
+    const redirectParam = this.route.snapshot.queryParams['redirect'];
+    this.isRedirectChangePassword = redirectParam === ChangePasswordComponent.CHANGE_PASSWORD_REDIRECT;
   }
+
   initForm() {
     this.loginInForm = this.fb.group({
       'email': ['',[Validators.email, Validators.required]],

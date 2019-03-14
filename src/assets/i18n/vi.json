@@ -93,13 +93,11 @@
         "website": "Địa chỉ trang chủ",
         "companyDescription": "Mô tả",
         "companyLogo": "Logo công ty",
-        "companyCoverPhoto": "Ảnh bìa công ty"
+        "companyCoverPhoto": "Ảnh bìa công ty",
+        "changePassword": "Thay đổi mật khẩu"
     },
     "company": {
-        "strategicPartners" : "Đối tác chiến lược",
-        "trainingsCourses" : "Các khóa đào tạo cho ứng viên",
-        "corporatePrograms" : "Chương trình doanh nghiệp",
-        "companyWeHelp": "Công ty chúng tôi đã giúp",
+        "btnRegisterNow": "ĐĂNG KÝ NGAY BÂY GIỜ!",
         "hrWelcome": "Chào mừng đến",
         "hrMainContent" : "Chúng tôi tin vào giá trị mà các chức năng của chúng tôi thêm vào một doanh nghiệp. Chúng tôi cảm thấy rằng phần chuyên gia này của HR thường không được công nhận vì đóng góp cho lợi nhuận và thành công của một doanh nghiệp.",
         "mainTitleListCompany": "Đối tác tuyệt vời của chúng tôi",
@@ -156,6 +154,14 @@
                 "currentAddress": "Địa chỉ"
 
             }
+        },
+        "changePassword": {
+            "header": "Thay đổi mật khẩu",
+            "oldPassword": "Mật khẩu hiện tại", 
+            "newPassword": "Mật khẩu mới",
+            "confirmNewPassword": "Mật khẩu mới",
+            "update": "Cập nhật",
+            "success": "Bạn đã cập nhật mật khẩu thành công"
         },
         "upTo": "Up to "
     },

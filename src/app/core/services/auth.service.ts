@@ -287,6 +287,14 @@ export class AuthService {
     localStorage.removeItem('user');
   }
 
+  changePassword(data: { password: string, newPassword: string }): Observable<any> {
+    return this.http.post('/auth/change-password', data)
+    .pipe(
+      map((response: any) => response),
+      catchError(this.handleError)
+    );
+  }
+  
   private checkNeedUpdateProfile(data: any) {
     if (!data.profileImageURL) {
       return 'profileImageURL';
