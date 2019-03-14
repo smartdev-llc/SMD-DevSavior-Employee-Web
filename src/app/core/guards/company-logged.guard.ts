@@ -22,7 +22,7 @@ export class CompanyLoggedGuard implements CanActivate {
     this.isCompanyRole = !!this.user && this.user.role === Role.Company;
 
     if (this.isCompanyRole) {
-      this.router.navigate(['/statistic']);
+      this.router.navigate(['/jobs/ALL']);
     }
 
     return !this.isCompanyRole;

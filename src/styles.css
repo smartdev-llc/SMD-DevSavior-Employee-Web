@@ -4515,3 +4515,13 @@ span.login-ins {
     width: 40px;
     height: 40px;
 }
+
+.btn-green {
+    background-color: #12cd6a;
+    border-color: #12cd6a;
+    color: white;
+}
+
+.btn-green:hover {
+    color: white;
+}

@@ -14,7 +14,6 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CpRegisterComponent } from './components/cp-register/cp-register.component';
-import { StatisticComponent } from './components/statistic/statistic.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { CompanyProfileComponent } from './components/company-profile/company-profile.component';
 import { CarouselModule } from 'ngx-bootstrap';
@@ -34,12 +33,13 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
 import { CandidateDetailComponent } from './components/candidate-detail/candidate-detail.component';
 import { CandidateService } from '../core/services/candidate/candidate.service';
 import { EditJobComponent }  from './components/edit-job/edit-job.component';
+import { ChangePasswordComponent } from './components/change-password/change-password.component'
 import { DetailJobComponent } from './detail-job/detail-job.component';
 import {JobService} from '../core/services/job.service';
 import { ShareButtonModule } from '@ngx-share/button';
 
 
-@NgModule({ 
+@NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(CompanyRoutes),
@@ -64,7 +64,6 @@ import { ShareButtonModule } from '@ngx-share/button';
     JobListComponent,
     CandidateListComponent,
     CpRegisterComponent,
-    StatisticComponent,
     PostJobComponent,
     CompanyProfileComponent,
     CompanyVerifyAccountComponent,
@@ -75,6 +74,7 @@ import { ShareButtonModule } from '@ngx-share/button';
     ResetPasswordComponent,
     CandidateDetailComponent,
     EditJobComponent,
+    ChangePasswordComponent,
     DetailJobComponent
   ],
   providers: [

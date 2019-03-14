@@ -14,13 +14,19 @@
             </div>
           </div>
 
-          <div class="col-sm-offset-1 col-sm-10 col-xs-12">
+          <div class="col-sm-offset-1 col-sm-10 col-xs-12 content-block">
             <table class="j-table-horizontal">
               <tr>
                 <th class="required">{{ 'companyUserProfile.emailAddress' | translate }}</th>
                 <td>
                   <div class="row-content">{{company.email}}</div>
                 </td>
+              </tr>
+            <tr>
+              <th></th>
+              <td>
+                <button routerLink="/change-password" class="btn btn-green" >{{'companyUserProfile.changePassword' | translate }}</button>
+              </td>
               </tr>
             </table>
           </div>
@@ -41,7 +47,7 @@
             </div>
 
           </div>
-          <div class="col-sm-offset-1 col-sm-10 col-xs-12">
+          <div class="col-sm-offset-1 col-sm-10 col-xs-12 content-block">
             <form class="validation-form" [formGroup]="updateProfileForm" (ngSubmit)="updateProfile()">
               <table class="j-table-horizontal" [class.is-edit]="isEdit">
                 <tr>
@@ -189,7 +195,7 @@
             </div>
           </div>
 
-          <div class="col-xs-12">
+          <div class="col-xs-12 content-block">
             <table class="j-table-horizontal is-edit">
               <tr>
                 <th>{{ 'companyUserProfile.companyLogo' | translate }}</th>
