@@ -34,7 +34,12 @@ import { CandidateDetailComponent } from './components/candidate-detail/candidat
 import { CandidateService } from '../core/services/candidate/candidate.service';
 import { EditJobComponent }  from './components/edit-job/edit-job.component';
 import { ChangePasswordComponent } from './components/change-password/change-password.component'
-@NgModule({ 
+import { DetailJobComponent } from './detail-job/detail-job.component';
+import {JobService} from '../core/services/job.service';
+import { ShareButtonModule } from '@ngx-share/button';
+
+
+@NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(CompanyRoutes),
@@ -48,6 +53,8 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
     SharedModule,
     PaginationModule.forRoot(),
     ScrollToModule.forRoot(),
+    ShareButtonModule.forRoot()
+
 
   ],
   declarations: [
@@ -67,14 +74,16 @@ import { ChangePasswordComponent } from './components/change-password/change-pas
     ResetPasswordComponent,
     CandidateDetailComponent,
     EditJobComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    DetailJobComponent
   ],
   providers: [
     CategoryCompanyService,
     PostJobCompanyService,
     SkillService,
     ProfileService,
-    CandidateService
+    CandidateService,
+    JobService
   ]
  })
 
