@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   isResendEmailSuccess = false;
   isEnLang: boolean = false;
   returnUrl: string;
+  isNotApproval = false;
   isRedirectChangePassword = false;
 
   constructor(
@@ -46,7 +47,7 @@ export class LoginComponent implements OnInit {
     const redirectParam = this.route.snapshot.queryParams['redirect'];
     this.isRedirectChangePassword = redirectParam === ChangePasswordComponent.CHANGE_PASSWORD_REDIRECT;
   }
-  
+
   initForm() {
     this.loginInForm = this.fb.group({
       'email': ['',[Validators.email, Validators.required]],
@@ -73,6 +74,8 @@ export class LoginComponent implements OnInit {
     this.formErrorMessage = '';
     this.isResendEmailSuccess = false;
     this.isNotVerified = false;
+    this.isNotApproval = false;
+
 
     if (this.loginInForm.invalid) {
       // console.log('error', this.loginInForm);
@@ -103,6 +106,7 @@ export class LoginComponent implements OnInit {
           if (message) {
             this.isLoading = false;
             this.isNotVerified = false;
+            this.isNotApproval = false;
             this.isResendEmailSuccess = true;
           }
         },
@@ -119,7 +123,11 @@ export class LoginComponent implements OnInit {
       this.formErrorMessage = error.originalError;
     }
     else if (error instanceof Forbidden) {
-      this.isNotVerified = true;
+      if (error.originalError === 'UNAPPROVED_ACCOUNT') {
+        this.isNotApproval = true;
+      }else if (error.originalError === 'UNVERIFIED_EMAIL'){
+        this.isNotVerified = true;
+      }
     }
     else if (error instanceof BadRequest) {
       this.formErrorMessage = error.originalError;

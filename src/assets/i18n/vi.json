@@ -329,7 +329,9 @@
         "verify": "Chúng tôi vừa gửi cho bạn một xác minh tới email của bạn.",
         "resend": "Vui lòng xác thực tài khoản của bạn hoặc click vào ",
         "resend2": "đây",
-        "resend3": "để chúng tôi gửi lại mã xác nhận"
+        "resend3": "để chúng tôi gửi lại mã xác nhận",
+        "isNotApproval": "Tài khoản của bạn đang được JuniorViec xét duyệt"
+
     },
     "register": {
         "titleCp": "Hãy tham gia cùng hàng ngàn công ty đang sử dụng Juniorviec mỗi ngày",

@@ -61,11 +61,19 @@
                         {{ 'login.signIn' | translate }}
                       </button>
                     </div>
-                    <div class="form-group spacing" *ngIf="isNotVerified">
+                    <div class="form-group spacing" *ngIf="isNotVerified || isNotApproval">
                       <div class="error-input">
                         <p class="login-error-message text-danger">
-                          {{ 'login.resend' | translate }}
-                          <a class="l-pointer" (click)="resendEmail(email)"> {{ 'login.resend2' | translate }}</a>  {{ 'login.resend3' | translate }}
+
+                          <span *ngIf="isNotVerified">
+                              {{ 'login.resend' | translate }}
+                            <a class="l-pointer" (click)="resendEmail(email)"> {{ 'login.resend2' | translate }}</a>  {{ 'login.resend3' | translate }}
+                          </span>
+
+                          <span *ngIf="isNotApproval">
+                              {{ 'login.isNotApproval' | translate }}
+                          </span>
+
                         </p>
                       </div>
                     </div>
