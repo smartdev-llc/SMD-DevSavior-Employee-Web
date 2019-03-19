@@ -52,31 +52,12 @@
             <h3>JuniorViec</h3>
             <p>{{'company.hrMainContent' | translate}}</p>
           </div>
-          <div class="icons-list">
-            <div class="media">
-              <i class="teaser-icon fa fa-rocket"></i>
-              <span>638</span>
-              <p>{{'company.companyWeHelp' | translate}}</p>
-            </div>
-
-            <div class="media">
-              <i class="teaser-icon fa fa-briefcase"></i>
-              <span>12</span>
-              <p>{{'company.corporatePrograms' | translate}}</p>
-            </div>
-
-            <div class="media">
-              <i class="teaser-icon fa fa-graduation-cap"></i>
-              <span>28</span>
-              <p>{{'company.trainingsCourses' | translate}}</p>
-            </div>
-
-            <div class="media">
-              <i class="teaser-icon fa fa-user"></i>
-              <span>125</span>
-              <p>{{'company.strategicPartners' | translate}}</p>
-            </div>
+          <div class="buttonHolder">
+            <a routerLink="/register">
+              <button class="btn btn-success-custom" type="button">{{ 'company.btnRegisterNow' | translate}}</button>
+            </a>
           </div>
+
         </div>
         <div class="col-xs-12 col-md-6 col-lg-6">
           <img class="hr-cover" src="../../../../assets/images/person01.jpg" alt="person01.jpg" />

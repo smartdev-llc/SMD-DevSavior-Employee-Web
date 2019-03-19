@@ -19,7 +19,7 @@
                   <div class="text-center m-t-lg m-b-lg">
                     <h1>{{ 'login.titleCp' | translate }} </h1>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group spacing">
                     <label></label>
                     <div class="login-error-message text-danger">
                       <div *ngIf="formErrorMessage">
@@ -29,8 +29,14 @@
                   </div>
                   <form class="m-t-lg contact_us" id="loginForm" [formGroup]="loginInForm" (ngSubmit)="onSubmit()" novalidate="novalidate">
 
-                    <!--Email-->
                     <div class="form-group">
+                      <label></label>
+                      <div *ngIf="!submitted && isRedirectChangePassword" class="text-highlight ">
+                          {{ 'company.changePassword.success' | translate }}
+                      </div>
+                    </div>
+                    <!--Email-->
+                    <div class="form-group spacing">
                       <label>{{ 'login.mail' | translate }}</label>
                       <input class="form-control valid" formControlName="email" type="email" id="username" name="name" placeholder="{{ 'login.paMail' | translate }}" value="" aria-required="true" aria-invalid="false">
                       <div *ngIf="(email.invalid && email.touched) || isSubmited">
@@ -40,7 +46,7 @@
                     </div>
 
                     <!--Password-->
-                    <div class="form-group">
+                    <div class="form-group spacing">
                       <label>{{ 'login.pass' | translate }}</label>
                       <input class="form-control valid" type="password" id="password" name="password" formControlName="password" placeholder="{{ 'login.paPass' | translate }}" aria-required="true" aria-invalid="false">
                       <div *ngIf="(password.invalid && password.touched) || isSubmited">
@@ -48,18 +54,26 @@
                       </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group spacing">
                       <input type="hidden" name="_redirect_url" value="">
                       <input type="hidden" name="_target_path" value="/v2/">
                       <button id="btnLogin" type="submit" class="btn btn-primary btn-dk ">
                         {{ 'login.signIn' | translate }}
                       </button>
                     </div>
-                    <div class="form-group" *ngIf="isNotVerified">
+                    <div class="form-group spacing" *ngIf="isNotVerified || isNotApproval">
                       <div class="error-input">
                         <p class="login-error-message text-danger">
-                          {{ 'login.resend' | translate }}
-                          <a class="l-pointer" (click)="resendEmail(email)"> {{ 'login.resend2' | translate }}</a>  {{ 'login.resend3' | translate }}
+
+                          <span *ngIf="isNotVerified">
+                              {{ 'login.resend' | translate }}
+                            <a class="l-pointer" (click)="resendEmail(email)"> {{ 'login.resend2' | translate }}</a>  {{ 'login.resend3' | translate }}
+                          </span>
+
+                          <span *ngIf="isNotApproval">
+                              {{ 'login.isNotApproval' | translate }}
+                          </span>
+
                         </p>
                       </div>
                     </div>
@@ -68,7 +82,7 @@
 
                     {{ 'login.verify' | translate }}
                     </p>
-                    <div class="form-group clearfix">
+                    <div class="form-group clearfix spacing">
                       <span class="pull-left">
 
                       </span>
@@ -76,7 +90,7 @@
                         <a routerLink="/lost-password">{{ 'login.lostPass' | translate }}</a>
                       </span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group spacing">
                       <p class="text-muted text-center text-left-xs m-t">{{ 'register.dontHaveAcc' | translate }} <a routerLink="/register"><strong>{{ 'login.signUpNow' | translate }}</strong></a></p>
                     </div>
 

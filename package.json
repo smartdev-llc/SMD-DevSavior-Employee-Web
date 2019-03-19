@@ -58,7 +58,9 @@
         "reselect": "^3.0.1",
         "rxjs": "^6.0.0",
         "webpack-bundle-analyzer": "^2.13.1",
-        "zone.js": "^0.8.26"
+        "zone.js": "^0.8.26",
+        "@ngx-share/button": "7.0.0",
+        "@ngx-share/core": "7.0.0"
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~0.6.8",
