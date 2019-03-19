@@ -131,7 +131,7 @@
     <div class="container">
       <div class="col-md-2">
         <button class="btn btn-success m-b-lg" #buttonDownload (click)="captureScreen(buttonDownload)">
-          <i class="fa fa-circle-o-notch fa-spin" *ngIf="isLoadingBtnDownloadPDF"></i>
+          <i class="fa fa-circle-o-notch fa-spin disabled" *ngIf="isLoadingBtnDownloadPDF"></i>
           Download
         </button>
       </div>
