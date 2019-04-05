@@ -212,7 +212,7 @@ export class AuthService {
   //TODO: Move handleError() in each Service class into one Class
   private handleError(error) {
     if (error.status === 403) {
-      return throwError(new Forbidden(error.error.message));
+      return throwError(new Forbidden(error.error.code));
     }
     if (error.status === 500) {
       return throwError(new InternalServer(error.error.message));
@@ -220,7 +220,7 @@ export class AuthService {
     if (error.status === 401) {
       return throwError(new Unauthorized(error.error.message));
     }
-    if (error.status === 400){
+    if (error.status === 400) {
       return throwError(new BadRequest(error.error.message));
     }
     return throwError(new AppErrors(error.error.message));
@@ -287,6 +287,14 @@ export class AuthService {
     localStorage.removeItem('user');
   }
 
+  changePassword(data: { password: string, newPassword: string }): Observable<any> {
+    return this.http.post('/auth/change-password', data)
+    .pipe(
+      map((response: any) => response),
+      catchError(this.handleError)
+    );
+  }
+  
   private checkNeedUpdateProfile(data: any) {
     if (!data.profileImageURL) {
       return 'profileImageURL';

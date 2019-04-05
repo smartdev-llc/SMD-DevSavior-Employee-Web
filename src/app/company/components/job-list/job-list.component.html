@@ -66,13 +66,13 @@
                     <td>
                         <div>
                             <div class="j-title">
-                                <a routerLink="/jobs/{{job.id}}" target="blank">{{job.title}}</a>
+                                <a routerLink="/company/job/{{job.id}}" target="blank">{{job.title}}</a>
                             </div>
                             <div class="j-location">
                                 {{job.location || "No mention location"}}
                             </div>
                             <div class="j-actions" >
-                                <a routerLink="/jobs/{{job.id}}" target="_blank">{{ 'company.jobListHeader.viewOnline' | translate}}</a>
+                                <a routerLink="/company/job/{{job.id}}" target="_blank">{{ 'company.jobListHeader.viewOnline' | translate}}</a>
                                 <a routerLink="/jobs/{{job.id}}/edit">{{ 'company.jobListHeader.edit' | translate}}</a>
                                 <button (click)="deleteJob(job.id)">{{ 'company.jobListHeader.del' | translate}}</button>
                                 <a *ngIf="job.status == 'ACTIVE'" routerLink="/jobs/{{job.id}}/candidates">{{ 'company.jobListHeader.viewCandidates' | translate}}</a>
