@@ -26,6 +26,7 @@ export class User {
   profileImageURL: string;
   id: number;
   email: string;
+  slug: string;
   password: string;
   gender: Gender;
   role: Role;
