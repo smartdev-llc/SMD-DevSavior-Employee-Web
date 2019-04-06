@@ -7,12 +7,12 @@ import { Company, UpdateCompanyProfileRequest } from '../../core/models/company'
 @Injectable()
 export class ProfileService {
 
-  constructor(private http: HttpClient, 
+  constructor(private http: HttpClient,
               private authService: AuthService  ) { }
 
   getprofile(): Observable<Company> {
-    const id = this.authService.getCurrentUser().id;
-    return this.http.get<Company>("/companies/" + id);
+    const slug = this.authService.getCurrentUser().slug;
+    return this.http.get<Company>("/companies/" + slug);
   }
 
   updateProfile(company: UpdateCompanyProfileRequest): Observable<any> {
