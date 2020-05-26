@@ -7,9 +7,9 @@ import { DEFAULT_CONFIG } from '../config/default';
 
 export const environment = {
   production: false,
-  appUrl: 'https://uat.employer.juniorviec.com',
-  apiEndpoint: 'https://uat.api.juniorviec.com',
-  studentUrl: 'https://uat.juniorviec.com',
+  appUrl: 'https://uat.employer.devsavior.com',
+  apiEndpoint: 'https://uat.api.devsavior.com',
+  studentUrl: 'https://uat.devsavior.com',
   appName: DEFAULT_CONFIG.appName,
   config: DEFAULT_CONFIG
 };
